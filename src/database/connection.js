@@ -1,13 +1,12 @@
-const { Sequelize } = require('sequelize')
+const mysql = require('mysql')
 
-const sequelize = new Sequelize('projeto', 'root', '', {
+const con = mysql.createConnection({
     host: 'localhost',
-    dialect: 'mysql',
-});
+    user: 'root',
+    password: '',
+    database: 'dbprojetofinal'
+})
 
-try{
-    sequelize.authenticate()
-    console.log('Conectado com Sequelize!');
-} catch(err){
-    console.error('Não foi possível conectar com Sequelize!', err)
-};
+con.connect()
+
+module.exports = con
