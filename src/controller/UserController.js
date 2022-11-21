@@ -5,7 +5,7 @@ const getUserById = require('../helpers/get-user-by-token')
 const getToken = require('../helpers/get-token')
 const createUserToken = require('../helpers/create-user-token')
 
-module.exports = class UserController{
+class UserController{
 
     static async register(req, res){
         const name = req.body.name
@@ -73,6 +73,7 @@ module.exports = class UserController{
         }
     }
 
+    // login
     static async login(req, res){
         const email = req.body.email
         const password = req.body.password
