@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `dbprojetofinal`.`Usuario` (
   `idUsuario` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(12) NOT NULL,
+  `senha` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idUsuario`))
 ENGINE = InnoDB;
 
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `dbprojetofinal`.`adminstrador` (
   `idadminstrador` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(12) NOT NULL,
+  `senha` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idadminstrador`))
 ENGINE = InnoDB;
 

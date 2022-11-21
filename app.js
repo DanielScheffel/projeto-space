@@ -26,6 +26,13 @@ app.use(
     })
 );
 
+//Selecionando a tabela do banco
+app.get('/usuario', (req, res) => {
+    con.query('SELECT * FROM adminstrador', (err, result) => {
+        res.send(result)
+    })
+})
+
 //Inicializando a porta que o app irá rodar
 app.listen('8080', () => {
     console.log('Aplicação rodando na porta 8080!');
