@@ -1,6 +1,6 @@
 const express = require('express')
 const sequelize = require('./src/database/connection')
-const { Sequelize } = require('./src/database/connection')
+const { Sequelize } = require('./src/database/connectionj')
 
 const app = express()
 
