@@ -10,7 +10,6 @@ class UserController{
     static async register(req, res){
         const name = req.body.name
         const email = req.body.email
-        const type = req.body.type
         const password = req.body.password
         const confirmPassword = req.body.confirmPassword
 
@@ -22,11 +21,6 @@ class UserController{
 
         if(!email){
             res.status(422).json({messge: 'O email é obrigatório'})
-            return
-        }
-
-        if(!type){
-            res.status(422).json({message: 'Type é obrigatório'})
             return
         }
 
