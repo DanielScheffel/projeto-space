@@ -17,7 +17,12 @@ app.use(express.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.send('main')
+    res.send('home')
+})
+
+// Página de Inicio 
+app.get('/inicio', (req, res) => {
+    res.render('./inicio')
 })
 
 // incluindo o engine
@@ -72,11 +77,6 @@ app.post('/video', (req, res) => {
         // console.log(result);
         res.send(result)
     })
-})
-
-// Página de Inicio 
-app.get('/inicio', (req, res) => {
-    res.render('inicio')
 })
 
 
