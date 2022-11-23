@@ -16,6 +16,10 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
+app.get('/', (req, res) => {
+    res.send('main')
+})
+
 // incluindo o engine
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -68,6 +72,11 @@ app.post('/video', (req, res) => {
         // console.log(result);
         res.send(result)
     })
+})
+
+// Página de Inicio 
+app.get('/inicio', (req, res) => {
+    res.render('inicio')
 })
 
 
